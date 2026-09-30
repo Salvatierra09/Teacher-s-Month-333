@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at top left, #ffdce9, transparent 35%),
+        radial-gradient(circle at bottom right, #f8c8dc, transparent 35%),
+        #fff5f8;
+
+    color: #704f5a;
+
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    overflow-x: hidden;
+}
+
+.card {
+    max-width: 1000px;
+    margin: auto;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    border: 2px solid rgba(231, 170, 192, 0.5);
+
+    box-shadow:
+        0 20px 50px rgba(151, 91, 111, 0.18);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.flower {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 48px;
+
+    color: #9b6576;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+    text-shadow: 2px 3px 5px rgba(155, 101, 118, 0.2);
+
+    animation: fadeDown 1.5s ease;
+}
+
+.subtitle {
+    font-size: 20px;
+
+    color: #b67b8d;
+
+    margin-bottom: 35px;
+}
+
+.message-card {
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffe3ed
+    );
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    margin-bottom: 45px;
+
+    border: 1px solid #f2c4d4;
+
+    box-shadow:
+        inset 0 0 20px rgba(255, 182, 203, 0.15),
+        0 10px 25px rgba(150, 90, 110, 0.1);
+
+    animation: fadeUp 1.5s ease;
+}
+
+.message-card h2 {
+    color: #a7657a;
+
+    margin-bottom: 20px;
+
+    font-size: 28px;
+}
+
+.message-card p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.ending {
+    color: #a7657a;
+
+    font-weight: bold;
+}
+
+.signature {
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    color: #9b6576;
+}
+
+.section-title {
+    font-size: 30px;
+
+    color: #9b6576;
+
+    margin: 35px 0 25px;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+.photo-card {
+    background: white;
+
+    padding: 12px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 25px rgba(140, 80, 100, 0.15);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+
+    box-shadow:
+        0 18px 35px rgba(140, 80, 100, 0.25);
+}
+
+.photo-card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border: 3px solid #f4c6d6;
+}
+
+.photo-card p {
+    padding: 15px 5px 8px;
+
+    font-size: 16px;
+
+    color: #9b6576;
+}
+
+.music-card {
+    background:
+        linear-gradient(
+            135deg,
+            #fbd4e2,
+            #fff0f5
+        );
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    margin-bottom: 45px;
+
+    border: 2px solid #f1bfd1;
+
+    box-shadow:
+        0 10px 30px rgba(150, 90, 110, 0.12);
+}
+
+.music-icon {
+    font-size: 50px;
+
+    animation: musicBounce 1.2s infinite;
+}
+
+.music-card h3 {
+    color: #965d71;
+
+    font-size: 25px;
+
+    margin: 10px 0;
+}
+
+.music-card p {
+    margin-bottom: 20px;
+}
+
+audio {
+    width: 80%;
+
+    max-width: 500px;
+}
+
+.thank-you {
+    background: #fff1f6;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    border: 2px dashed #e5a9bf;
+}
+
+.thank-you h2 {
+    color: #a7657a;
+
+    margin-bottom: 15px;
+}
+
+.thank-you p {
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+.big-heart {
+    font-size: 60px;
+
+    color: #d98ca5;
+
+    margin-top: 15px;
+
+    animation: heartbeat 1.3s infinite;
+}
+
+
+footer {
+    margin-top: 25px;
+
+    color: #9b6576;
+
+    font-size: 15px;
+}
+
+.hearts span {
+    position: fixed;
+
+    bottom: -50px;
+
+    color: #e9a6bb;
+
+    font-size: 25px;
+
+    animation: floatHeart 8s linear infinite;
+
+    z-index: 1;
+
+    opacity: 0.7;
+}
+
+.hearts span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 35%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 65%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(6) {
+    left: 80%;
+    animation-delay: 5s;
+}
+
+.hearts span:nth-child(7) {
+    left: 92%;
+    animation-delay: 6s;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes musicBounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.2);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.2);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .card {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .message-card {
+        padding: 25px 18px;
+    }
+
+    .message-card p {
+        font-size: 16px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        height: 250px;
+    }
+
+    audio {
+        width: 100%;
+    }
+
+}
